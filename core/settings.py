@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 import environ
 from datetime import timedelta
 env=environ.Env()
@@ -107,11 +108,14 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': env.db("DATABASE_URL",default="postgres:///dhavana"),
+# }
 DATABASES = {
-    'default': env.db("DATABASE_URL",default="postgres:///dhavana"),
+   'default': dj_database_url.config(default=os.getenv("DATABASE_URL"))
 }
 
-DATABASES['default']['ATOMIC_REQUESTS'] = True
+# DATABASES['default']['ATOMIC_REQUESTS'] = True
 CORS_ORIGIN_WHITELIST = [
 'http://localhost:3000',
 'http://localhost:8000',
