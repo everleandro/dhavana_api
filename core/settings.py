@@ -32,8 +32,9 @@ SECRET_KEY = env('SECRET_KEY')
 
 CSRF_TRUSTED_ORIGINS = [
     'https://dhavanaapi-production.up.railway.app',
-      'https://hisp-merk.vercel.app/'  # Reemplaza esto con tu dominio
+    'https://hisp-merk-git-dev-everleandros-projects.vercel.app',  # Reemplaza esto con tu dominio
 ]
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -126,6 +127,7 @@ CORS_ORIGIN_WHITELIST = [
 'http://localhost:8000',
 'http://127.0.0.1:8000',
 'http://127.0.0.1:3000',
+'https://hisp-merk-git-dev-everleandros-projects.vercel.app'
 ]
 
 CSFR_TRUSTED_ORIGINS = [
