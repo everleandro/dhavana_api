@@ -77,6 +77,8 @@ CKEDITOR_CONFIGS={
 
 CKEDITOR_UPLOAD_PATH='/media/'
 
+CORS_ALLOW_ALL_ORIGINS = True
+
 MIDDLEWARE = [
     'social_django.middleware.SocialAuthExceptionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
